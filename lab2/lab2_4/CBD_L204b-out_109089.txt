@@ -1,0 +1,20 @@
+Username ('Enter para terminar'): jake  
+Product ('Enter para dar logout'): batata
+Quantity ('Enter para dar logout'): 9
+Produto e quantidade adicionado com sucesso!
+Product ('Enter para dar logout'): couves
+Quantity ('Enter para dar logout'): 2
+ERRO: Limite de produtos atingido! Volte a tentar dentro de 26 segundos ou diminua a quantidade do produto. (Pode adicionar mais 1 produtos)
+Product ('Enter para dar logout'): couves
+Quantity ('Enter para dar logout'): 1
+Produto e quantidade adicionado com sucesso!
+Product ('Enter para dar logout'): alfaces
+Quantity ('Enter para dar logout'): 3
+ERRO: Limite de produtos atingido! Volte a tentar dentro de 14 segundos ou diminua a quantidade do produto. (Pode adicionar mais 0 produtos)
+Product ('Enter para dar logout'): 
+Username ('Enter para terminar'): maria
+Product ('Enter para dar logout'): alface
+Quantity ('Enter para dar logout'): 10
+Produto e quantidade adicionado com sucesso!
+Product ('Enter para dar logout'): 
+Username ('Enter para terminar'): 

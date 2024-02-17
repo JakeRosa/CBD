@@ -1,0 +1,68 @@
+public static int countLocalidades() {
+                AggregateIterable<Document> numLocalidades = restaurants.aggregate(Arrays.asList(
+                                new Document("$group", new Document("_id", "$localidade")),
+                                new Document("$count", "numLocalidades")));
+                return numLocalidades.first().getInteger("numLocalidades");
+        }
+
+Numero de localidades distintas: 5	<-- Dei delete da localidade que inseri na alinea a)
+
+
+public static Map<String, Integer> countRestByLocalidade() {
+                AggregateIterable<Document> numRestByLocalidade = restaurants.aggregate(Arrays.asList(
+                                new Document("$group", new Document("_id", "$localidade").append("numRestaurantes",
+                                                new Document("$sum", 1)))));
+
+                HashMap<String, Integer> map = new HashMap<>();
+                for (Document doc : numRestByLocalidade) {
+                        map.put(doc.getString("_id"), doc.getInteger("numRestaurantes"));
+                }
+
+                return map;
+        }
+
+-> Queens - 738
+-> Staten Island - 158
+-> Brooklyn - 684
+-> Manhattan - 1883
+-> Bronx - 309
+
+
+public static List<String> getRestWithNameCloserTo(String name) {
+                FindIterable<Document> names = restaurants.find(new Document("nome",
+                                new Document("$regex", name)));
+
+                List<String> list = new ArrayList<>();
+                for (Document doc : names) {
+                        list.add(doc.getString("nome"));
+                }
+
+                return list;
+        }
+
+Nome de restaurantes contendo 'Park' no nome: 
+-> Morris Park Bake Shop
+-> New Park Pizzeria & Restaurant
+-> Parkside Restaurant
+-> New Parkway Restaurant
+-> Park Plaza Restaurant
+-> Pizza Park
+-> Rego Park Cafe
+-> Park Billiards
+-> Dyker Park Bagels
+-> Nora'S Park Bench Cafe
+-> Forest Park Golf Course
+-> Park Italian Gourment
+-> Whiskey Park
+-> Terrace On The Park
+-> Gigino At Wagner Park
+-> Park Slope Ale House
+-> Tribeca Park Cafe
+-> Park Bar
+-> Morris Park Pizza
+-> The Hallmark Of Battery Park City- Dining Room
+-> The Park
+-> Central Park Boathouse
+-> The Park Slope Chipshop
+-> Sunset Park Diner & Donuts
+-> Park'S Snack

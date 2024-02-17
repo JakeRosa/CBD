@@ -1,0 +1,61 @@
+---------- ESCOLHA UMA OPÇÃO ----------
+A - Adicionar utilizador
+E - Enviar mensagem
+L - Ler mensagem
+V - Ver utilizadores registados
+S - Sair
+----------------------------------------
+> a
+Username: jake
+Utilizador jake adicionado com sucesso!
+---------- ESCOLHA UMA OPÇÃO ----------
+A - Adicionar utilizador
+E - Enviar mensagem
+L - Ler mensagem
+V - Ver utilizadores registados
+S - Sair
+----------------------------------------
+> a
+Username: fabio
+Utilizador fabio adicionado com sucesso!
+---------- ESCOLHA UMA OPÇÃO ----------
+A - Adicionar utilizador
+E - Enviar mensagem
+L - Ler mensagem
+V - Ver utilizadores registados
+S - Sair
+----------------------------------------
+> e
+Emissor: jake
+Recetor: fabio
+Mensagem: Olá Fabio!
+Mensagem enviada com sucesso!
+---------- ESCOLHA UMA OPÇÃO ----------
+A - Adicionar utilizador
+E - Enviar mensagem
+L - Ler mensagem
+V - Ver utilizadores registados
+S - Sair
+----------------------------------------
+> l
+Recetor: fabio
+Emissor: jake
+Mensagem recebida de jake: Olá Fabio!
+---------- ESCOLHA UMA OPÇÃO ----------
+A - Adicionar utilizador
+E - Enviar mensagem
+L - Ler mensagem
+V - Ver utilizadores registados
+S - Sair
+----------------------------------------
+> v
+Utilizadores registados: [jake, fabio]
+---------- ESCOLHA UMA OPÇÃO ----------
+A - Adicionar utilizador
+E - Enviar mensagem
+L - Ler mensagem
+V - Ver utilizadores registados
+S - Sair
+----------------------------------------
+> s
+Encerrando...

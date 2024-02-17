@@ -1,0 +1,33 @@
+CREATE KEYSPACE my_keyspace
+WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3};
+
+SELECT * FROM system_schema.keyspaces;
+
+USE my_keyspace;
+
+CREATE TABLE emp(
+    emp_id int PRIMARY KEY,
+    emp_name text,
+    emp_city text,
+    emp_sal varint,
+    emp_phone varint
+);
+
+ALTER TABLE emp ADD emp_email text;
+
+CREATE INDEX index_name ON emp (emp_name);
+
+INSERT INTO emp (emp_id, emp_name, emp_city, emp_phone, emp_sal) VALUES(1,'Andre', 'Aveiro', 936693006, 50000);
+
+SELECT * FROM emp;
+
+UPDATE emp SET emp_email='andre_empresarial@gmail.com' WHERE emp_id=1;
+
+DELETE FROM emp WHERE emp_id=1;
+
+DROP INDEX index_name;
+
+TRUNCATE emp;
+DROP TABLE emp;
+
+DROP KEYSPACE my_keyspace;

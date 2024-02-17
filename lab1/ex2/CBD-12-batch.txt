@@ -1,0 +1,15 @@
+lpush names tiago joao rodrigo fabio
+lrange names 0 3
+sadd namesSet ana maria luis jake
+sadd namesSet2 tiago pedro ricardo jake
+smembers namesSet
+smembers namesSet2
+sinter namesSet namesSet2
+zadd sortedNames 0 tiago 0 joao 0 rodrigo 1 fabio 1 ana 1 maria 2 pedro 2 tiago 2 jake
+zrange sortedNames 0 10
+zrevrange sortedNames 0 10
+hmset user:1 name jake age 20 pass 1234
+hset user:1 country portugal
+hgetall user:1
+keys *
+

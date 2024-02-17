@@ -1,0 +1,134 @@
+// NMEC: 109089
+
+#1
+MATCH (people:Person)-[:ACTED_IN]->(movie:Movie)<-[:DIRECTED]-(people)
+RETURN DISTINCT people.name AS ActorName, movie.title AS MovieTitle
+
+#2
+MATCH (actor:Person)-[:ACTED_IN]->(movie:Movie)
+WHERE movie.released > 2005
+RETURN DISTINCT actor.name, movie.title, movie.released
+ORDER BY movie.released, movie.title, actor.name
+
+#3
+MATCH (a)-[r]-(b)
+WITH a, b, COLLECT(type(r)) AS relTypes
+WHERE size(relTypes) > 1 AND id(a) < id(b)
+RETURN a, b, relTypes
+ORDER BY a, b;
+
+#4
+MATCH (p1:Person)-[:REVIEWED]->(movie:Movie)<-[:REVIEWED]-(p2:Person)
+WHERE id(p1) < id(p2)
+return DISTINCT p1.name, p2.name, movie.title
+ORDER BY movie.title, p1.name, p2.name
+
+
+#5
+MATCH (a1:Person)-[:ACTED_IN]->(movie:Movie)<-[:ACTED_IN]-(a2:Person)
+WITH a1, a2, COLLECT(movie.title) AS MoviesList
+WHERE id(a1) < id(a2) and size(MoviesList) > 1
+RETURN DISTINCT a1.name, a2.name, MoviesList
+ORDER BY a1.name, a2.name
+
+#6 
+MATCH (people:Person)-[:ACTED_IN]->(movie:Movie {title: "Apollo 13"})
+WITH people, movie, movie.released-people.born AS AgeAtRelease
+WITH avg(AgeAtRelease) AS AverageAge
+RETURN AverageAge
+
+#7
+MATCH (people:Person)-[:ACTED_IN]->(movie:Movie)
+WITH movie, movie.released-people.born AS AgeAtRelease
+WITH movie.title AS MovieTitle, avg(AgeAtRelease) AS AverageAge
+RETURN MovieTitle, AverageAge
+ORDER BY AverageAge DESC
+LIMIT 10
+
+#8
+MATCH (people:Person)-[:ACTED_IN]->(movie:Movie)
+WITH movie, avg(movie.released-people.born) AS AvgAgeAtRelease
+ORDER BY AvgAgeAtRelease ASC
+LIMIT 1
+MATCH (people:Person)-[:ACTED_IN]->(movie:Movie)
+RETURN people, movie;
+
+#9
+MATCH p=shortestPath((John:Person {name:"John Cusack"})-[*]-(Demi:Person {name:"Demi Moore"}))
+RETURN p
+
+#10
+MATCH p=shortestPath((Keanu:Person {name:"Keanu Reeves"})-[*]-(Tom:Person {name: "Tom Cruise"}))
+RETURN length(p)
+
+#11
+MATCH p=shortestPath((Jim:Person where Jim.name contains "Jim")-[*]-(Kevin:Person where Kevin.name contains "Kevin"))
+RETURN length(p)
+
+#12
+MATCH (people:Person)-[*2]-(Jim:Person {name: "Jim Cash"})
+RETURN DISTINCT people.name
+
+// neste caso sim
+MATCH p=shortestPath((people:Person)-[*]-(Jim:Person {name: "Jim Cash"}))
+where people<>Jim
+RETURN DISTINCT people.name, length(p)
+ORDER BY length(p)
+
+#13
+//??
+MATCH p = shortestpath((people:Person)-[*]-(Jim:Person {name: "Kevin Bacon"}))
+WHERE people<>Jim
+RETURN length(p)
+ORDER BY length(p) DESC
+LIMIT 1
+
+#14
+//??
+MATCH p = shortestpath((p1:Person)-[*]-(p2:Person))
+WHERE p1<>p2
+RETURN length(p)
+ORDER BY length(p) DESC
+LIMIT 1
+
+#15
+MATCH p = shortestpath((p1:Person)-[*]-(p2:Person))
+WHERE p1<>p2
+RETURN length(p), COUNT(length(p)) AS depthOccurrences
+ORDER BY length(p)
+
+#16
+MATCH p = shortestpath((p1:Person)-[:ACTED_IN*]-(p2:Person))
+WHERE p1<>p2
+RETURN DISTINCT p1.name, p2.name, AVG(length(p)) AS depthAVG
+ORDER BY depthAVG, p1.name, p2.name
+LIMIT 10
+
+#17
+//?????
+MATCH (p:Person)-[r:ACTED_IN]->(m:Movie)
+WHERE ANY(role IN r.roles WHERE role CONTAINS "Dr.")
+RETURN DISTINCT properties(p), r.roles AS rolesList
+
+#18
+// A lista de atores dos filmes dirigidos e produzidos pela mesma pessoa e que possuem tagline
+MATCH (p:Person)-[:DIRECTED]->(m:Movie)<-[:PRODUCED]-(p)
+WHERE m.tagline IS NOT NULL
+MATCH (m)<-[:ACTED_IN]-(a:Person)
+RETURN DISTINCT m.title, COLLECT(DISTINCT a.name) AS actors;
+
+#19
+// O par de filmes com a palavra "life" na tagline que possuem a maior distancia entre eles
+MATCH p = shortestpath((m1:Movie WHERE m1.tagline CONTAINS 'life')-[:ACTED_IN*]-(m2:Movie WHERE m2.tagline CONTAINS 'life'))
+WHERE m1<>m2
+RETURN m1, m2, length(p)
+ORDER BY length(p) DESC
+LIMIT 1
+
+#20
+// Pessoas que dirigiram um filme, atuaram noutro e desempenharam mais que uma role no mesmo
+MATCH (person:Person)-[:DIRECTED]->(directedMovie:Movie)
+MATCH (person)-[r:ACTED_IN]->(actedMovie:Movie)
+WHERE directedMovie <> actedMovie AND size(r.roles) > 1
+RETURN DISTINCT person.name, directedMovie.title AS directedMovie, actedMovie.title AS actedMovie, r.roles AS roles;
+

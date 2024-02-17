@@ -1,0 +1,52 @@
+[
+  {
+    "rating": 5,
+    "video_id": 1,
+    "rating_id": 9
+  },
+  {
+    "rating": 5,
+    "video_id": 2,
+    "rating_id": 4
+  },
+  {
+    "rating": 5,
+    "video_id": 2,
+    "rating_id": 7
+  },
+  {
+    "rating": 3.4,
+    "video_id": 1,
+    "rating_id": 6
+  },
+  {
+    "rating": 4.2,
+    "video_id": 2,
+    "rating_id": 1
+  },
+  {
+    "rating": 4.6,
+    "video_id": 2,
+    "rating_id": 10
+  },
+  {
+    "rating": 4.1,
+    "video_id": 3,
+    "rating_id": 8
+  },
+  {
+    "rating": 4.3,
+    "video_id": 1,
+    "rating_id": 3
+  },
+  {
+    "rating": 3.2,
+    "video_id": 3,
+    "rating_id": 5
+  },
+  {
+    "rating": 4,
+    "video_id": 3,
+    "rating_id": 2
+  }
+]

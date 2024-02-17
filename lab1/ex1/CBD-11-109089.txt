@@ -1,0 +1,60 @@
+incr newkey
+get newkey
+lpush mylist ola
+lpush mylist adeus
+lrange 0 3
+lrange mylist 0 3
+get *
+keys *
+get newkey 
+incr ns
+incrby ns 5
+list *
+lpush mylist ate a proxima
+lrange mylist 0 10
+rpush oi
+rpush mylist oi
+lrange mylist 0 10
+lpop mylist
+
+lrange mylist 0 10
+ltrim mylist 2 3
+lrange mylist 0 10
+set teste 1 2 3
+key *
+keys *
+sadd mySet hello
+smembers
+smembers mySet
+sadd mySet2 hello
+sadd mySet2 bye
+sinter mySet mySet2
+sadd mySet2 hell
+sinter mySet mySet2
+sismember mySet2 hel
+sismember mySet2 hell
+sismember mySet2 hell0
+sismember mySet2 hello
+smembers mySet2
+srandmember mySet2
+zadd mySortedSet 0 Grupo1
+zadd mySortedSet 1 Grupo2
+zadd mySortedSet 2 Grupo3
+zadd mySortedSet 0 Jake
+zadd mySortedSet 0 Hugo
+zadd mySortedSet 1 Alex
+zadd mySortedSet 1 Bernardo
+zadd mySortedSet 2 Andre
+zrange mySortedSet 0 10
+zrem mySortedSet Grupo1 Grupo2 Grupo3
+keys *
+hmset user:1 ID 1 name tiago pass 12345 age 20
+hset user:1 country portugal
+hget user:1 country
+hmget name
+hmget grupo1 name
+hmget user:1 name
+hset name jose
+hset user:1 name jose
+hget user:1 name
+hgetall user:1 

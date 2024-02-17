@@ -1,0 +1,54 @@
+Entidades: Person e Project
+Relações: WORKS_ON -> Person p trabalha no projeto proj
+
+LOAD CSV WITH HEADERS FROM "file:///git_selection.csv" AS row
+MERGE (p:Person{svn_id: row.svn_id})
+ON CREATE SET p.real_name = row.real_name, p.organization = row.organization
+MERGE (proj:Project {name: row.project_name})
+MERGE (p)-[:WORKS_ON {role: row.role_on_project}]->(proj);
+
+#1
+MATCH (p:Person)
+RETURN properties(p)
+
+#2
+MATCH (p:Person)
+RETURN p.real_name
+
+#3
+MATCH (p:Person) -[:WORKS_ON]->(proj:Project)
+RETURN DISTINCT properties(proj)
+
+#4
+MATCH (p:Person) -[:WORKS_ON]->(proj:Project)
+RETURN p.real_name, COUNT(proj) AS projCount
+ORDER BY p.real_name
+
+#5
+MATCH (p:Person) -[:WORKS_ON]->(proj:Project)
+RETURN p.real_name, COUNT(proj) AS projCount
+ORDER BY projCount DESC
+
+#6
+MATCH (p:Person) -[:WORKS_ON]->(proj:Project)
+return proj.name, COUNT(p) AS peopleCount
+ORDER BY proj.name
+
+#7
+MATCH (p:Person) -[r:WORKS_ON]->(proj:Project)
+WHERE r.role="Committer"
+return proj.name, COUNT(p) AS peopleCount
+ORDER BY proj.name
+
+#8
+MATCH(atm:Person {svn_id: 'atm'})-[:WORKS_ON]->(proj:Project)<-[:WORKS_ON]-(p:Person)
+WHERE atm<>p
+RETURN DISTINCT atm.real_name, p.real_name, proj.name
+ORDER BY p.real_name
+
+#9
+MATCH(atm:Person {svn_id: 'atm'})-[r1:WORKS_ON]->(proj:Project)<-[r2:WORKS_ON]-(p:Person)
+WHERE atm<>p AND r1.role="PMC" AND r2.role="Committer"
+RETURN DISTINCT atm.real_name, p.real_name, proj.name
+ORDER BY p.real_name
+

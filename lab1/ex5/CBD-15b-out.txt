@@ -1,0 +1,26 @@
+Username: jake
+Digite um produto ('Enter' para terminar): produto1
+Digite a quantidade ('Enter' para terminar): 2
+Produto produto1 e quantidade adicionados!
+Digite um produto ('Enter' para terminar): produto2
+Digite a quantidade ('Enter' para terminar): 2
+Produto produto2 e quantidade adicionados!
+Digite um produto ('Enter' para terminar): produto3
+Digite a quantidade ('Enter' para terminar): 2
+Produto produto3 e quantidade adicionados!
+Digite um produto ('Enter' para terminar): produto4
+Digite a quantidade ('Enter' para terminar): 2
+Produto produto4 e quantidade adicionados!
+Digite um produto ('Enter' para terminar): produto5
+Digite a quantidade ('Enter' para terminar): 2
+Produto produto5 e quantidade adicionados!
+Digite um produto ('Enter' para terminar): produto6
+Digite a quantidade ('Enter' para terminar): 2
+ERRO: Limite de produtos excedido! Volte a tentar dentro de 5 segundos ou digite um valor menor de unidades
+Digite um produto ('Enter' para terminar): produto7
+Digite a quantidade ('Enter' para terminar): 2
+Produto produto7 e quantidade adicionados!
+Digite um produto ('Enter' para terminar): produto8
+Digite a quantidade ('Enter' para terminar): 2
+ERRO: Limite de produtos excedido! Volte a tentar dentro de 0 segundos ou digite um valor menor de unidades
+Digite um produto ('Enter' para terminar): 

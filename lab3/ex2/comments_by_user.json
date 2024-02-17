@@ -1,0 +1,72 @@
+[
+  {
+    "username": "markiplier",
+    "comment_timestamp": "2023-11-28 00:58:41.506",
+    "comment": "Comentário 4",
+    "id": 4,
+    "video_id": 3
+  },
+  {
+    "username": "lillysingh",
+    "comment_timestamp": "2023-11-28 00:58:41.534",
+    "comment": "Comentário 7",
+    "id": 7,
+    "video_id": 1
+  },
+  {
+    "username": "caseyneistat",
+    "comment_timestamp": "2023-11-28 00:58:41.554",
+    "comment": "Comentário 9",
+    "id": 9,
+    "video_id": 2
+  },
+  {
+    "username": "pewdiepie",
+    "comment_timestamp": "2023-11-28 00:58:41.479",
+    "comment": "Comentário 1",
+    "id": 1,
+    "video_id": 2
+  },
+  {
+    "username": "phillyd",
+    "comment_timestamp": "2023-11-28 00:58:41.565",
+    "comment": "Comentário 10",
+    "id": 10,
+    "video_id": 1
+  },
+  {
+    "username": "mrbeast",
+    "comment_timestamp": "2023-11-28 00:58:41.543",
+    "comment": "Comentário 8",
+    "id": 8,
+    "video_id": 2
+  },
+  {
+    "username": "mrbeast",
+    "comment_timestamp": "2023-11-28 00:58:41.488",
+    "comment": "Comentário 2",
+    "id": 2,
+    "video_id": 3
+  },
+  {
+    "username": "lizakoshy",
+    "comment_timestamp": "2023-11-28 00:58:41.516",
+    "comment": "Comentário 5",
+    "id": 5,
+    "video_id": 2
+  },
+  {
+    "username": "daviddobrik",
+    "comment_timestamp": "2023-11-28 00:58:41.498",
+    "comment": "Comentário 3",
+    "id": 3,
+    "video_id": 3
+  },
+  {
+    "username": "ninja",
+    "comment_timestamp": "2023-11-28 00:58:41.527",
+    "comment": "Comentário 6",
+    "id": 6,
+    "video_id": 1
+  }
+]

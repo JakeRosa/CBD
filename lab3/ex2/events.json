@@ -1,0 +1,72 @@
+[
+  {
+    "video_id": 1,
+    "username": "caseyneistat",
+    "event_timestamp": "2023-11-28 00:58:41.884",
+    "event_type": "stop",
+    "second": "2023-11-28 00:58:41.884"
+  },
+  {
+    "video_id": 3,
+    "username": "phillyd",
+    "event_timestamp": "2023-11-28 00:58:41.902",
+    "event_type": "play",
+    "second": "2023-11-28 00:58:41.902"
+  },
+  {
+    "video_id": 2,
+    "username": "lizakoshy",
+    "event_timestamp": "2023-11-28 00:58:41.816",
+    "event_type": "pause",
+    "second": "2023-11-28 00:58:41.816"
+  },
+  {
+    "video_id": 2,
+    "username": "pewdiepie",
+    "event_timestamp": "2023-11-28 00:58:41.773",
+    "event_type": "play",
+    "second": "2023-11-28 00:58:41.773"
+  },
+  {
+    "video_id": 1,
+    "username": "mrbeast",
+    "event_timestamp": "2023-11-28 00:58:41.783",
+    "event_type": "pause",
+    "second": "2023-11-28 00:58:41.783"
+  },
+  {
+    "video_id": 1,
+    "username": "mrbeast",
+    "event_timestamp": "2023-11-28 00:58:41.804",
+    "event_type": "play",
+    "second": "2023-11-28 00:58:41.804"
+  },
+  {
+    "video_id": 1,
+    "username": "mrbeast",
+    "event_timestamp": "2023-11-28 00:58:41.830",
+    "event_type": "stop",
+    "second": "2023-11-28 00:58:41.830"
+  },
+  {
+    "video_id": 1,
+    "username": "mrbeast",
+    "event_timestamp": "2023-11-28 00:58:41.838",
+    "event_type": "play",
+    "second": "2023-11-28 00:58:41.838"
+  },
+  {
+    "video_id": 1,
+    "username": "mrbeast",
+    "event_timestamp": "2023-11-28 00:58:41.853",
+    "event_type": "pause",
+    "second": "2023-11-28 00:58:41.853"
+  },
+  {
+    "video_id": 3,
+    "username": "daviddobrik",
+    "event_timestamp": "2023-11-28 00:58:41.794",
+    "event_type": "stop",
+    "second": "2023-11-28 00:58:41.794"
+  }
+]

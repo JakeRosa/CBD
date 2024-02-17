@@ -1,0 +1,15 @@
+show dbs     // Lista todas as BDs
+
+use teste    // Cria uma nova DB ou usa uma existente
+
+show collections    // lista coleções da BD
+
+db.teste.insert({name: "Joaquim", age: 20})    //insere um documento na coleção criada
+
+db.teste.update({name: "Joaquim"}, {$set: {lastName: "Rosa"}})    //atualiza o documento que atende ao critério dado
+
+db.teste.find({name: "Joaquim"})    //retorna os documentos que respeitam o critério dado
+
+db.teste.remove({name: "Joaquim"})    //remove os documentos que atendem o criterio dado
+
+db.dropDatabase()    // apaga a atual BD

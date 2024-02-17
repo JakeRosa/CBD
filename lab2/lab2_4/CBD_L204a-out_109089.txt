@@ -1,0 +1,31 @@
+Username ('Enter para terminar'): jake
+Product ('Enter para dar logout'): batata0
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata1
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata2
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata3
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata4
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata5
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata6
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata7
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata8
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata9
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): batata10
+ERRO: Limite de produtos atingido! Volte a tentar dentro de 13 segundos.
+Product ('Enter para dar logout'): batata11
+ERRO: Limite de produtos atingido! Volte a tentar dentro de 11 segundos.
+Product ('Enter para dar logout'): 
+Username ('Enter para terminar'): maria
+Product ('Enter para dar logout'): batata
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): 
+Username ('Enter para terminar'): 

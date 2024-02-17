@@ -1,0 +1,37 @@
+Username: jake
+Digite um produto ('Enter' para terminar): produto1 
+Produto produto1 adicionado!
+Digite um produto ('Enter' para terminar): produto2
+Produto produto2 adicionado!
+Digite um produto ('Enter' para terminar): produto3 
+Produto produto3 adicionado!
+Digite um produto ('Enter' para terminar): produto4
+Produto produto4 adicionado!
+Digite um produto ('Enter' para terminar): produto5
+Produto produto5 adicionado!
+Digite um produto ('Enter' para terminar): produto6
+Produto produto6 adicionado!
+Digite um produto ('Enter' para terminar): produto7
+Produto produto7 adicionado!
+Digite um produto ('Enter' para terminar): produto8
+Produto produto8 adicionado!
+Digite um produto ('Enter' para terminar): produto9
+Produto produto9 adicionado!
+Digite um produto ('Enter' para terminar): produto10
+Produto produto10 adicionado!
+Digite um produto ('Enter' para terminar): produto11
+ERRO: Limite de produtos excedido! Volte a tentar dentro de 8 segundos
+Digite um produto ('Enter' para terminar): produto11
+Produto produto11 adicionado!
+Digite um produto ('Enter' para terminar): produto12
+Produto produto12 adicionado!
+Digite um produto ('Enter' para terminar): produto13
+Produto produto13 adicionado!
+Digite um produto ('Enter' para terminar): produto14
+ERRO: Limite de produtos excedido! Volte a tentar dentro de 1 segundos
+Digite um produto ('Enter' para terminar): produto15
+Produto produto15 adicionado!
+Digite um produto ('Enter' para terminar): produto16
+ERRO: Limite de produtos excedido! Volte a tentar dentro de 0 segundos
+Digite um produto ('Enter' para terminar): produto17
+Produto produto17 adicionado!

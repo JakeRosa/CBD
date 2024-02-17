@@ -1,0 +1,38 @@
+No redis cada utilizador tem uma chave associada a uma lista de produtos, enquanto no mongodb cada utilizador é um documento com uma lista de produtos. No redis a expiração do produto é feita criando uma chave com o mesmo nome de cada produto e usando o Time To Live da mesma. No mongodb a expiração é gerida usando um timestamp de expiração.
+O redis é adequado para cenários em que a velocidade é necessária e a complexidade dos dados é baixa, uma vantagem é que a mesma oferecia já o método expire que tratava da expiração dos produtos, uma grande desvantagem que ela tinha é que caso o limite de produtos permitidos fosse maior a BD ia ficar muito sobrecarregada.
+O mongodb permite uma estrutura de dados mais complexa e oferece recursos mais avançados de pesquisa, o que permitiu criar um documento para cada produto com os fields "name" e "expirationTime", diretamente dentro da lista.
+Observando os testes abaixo, se a principal prioridade for a velocidade das operações, o redis é mais adequado, se objetivo for ter uma base de dados mais complexa, é melhor usado mongodb.
+
+
+Comparação dos tempos de execução:
+
+REDIS:
+
+Digite um produto ('Enter' para terminar): batata
+Tempo de execução para verificar produtos expirados (Redis): 1445854 ns
+Tempo de execução para adicionar produto (Redis): 228730 ns
+Produto batata adicionado!
+Digite um produto ('Enter' para terminar): couve
+Tempo de execução para verificar produtos expirados (Redis): 1519467 ns
+Tempo de execução para adicionar produto (Redis): 167550 ns
+Produto couve adicionado!
+Digite um produto ('Enter' para terminar): cenoura
+Tempo de execução para verificar produtos expirados (Redis): 803594 ns
+Tempo de execução para adicionar produto (Redis): 92958 ns
+Produto cenoura adicionado!
+
+
+MONGODB:
+
+Product ('Enter para dar logout'): batata
+Tempo de execução para verificar produtos expirados (MongoDB): 4605891 ns
+Tempo de execução para adicionar produto (MongoDB): 2471961 ns
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): couve
+Tempo de execução para verificar produtos expirados (MongoDB): 4082152 ns
+Tempo de execução para adicionar produto (MongoDB): 2000883 ns
+Produto adicionado com sucesso!
+Product ('Enter para dar logout'): cenoura
+Tempo de execução para verificar produtos expirados (MongoDB): 3594730 ns
+Tempo de execução para adicionar produto (MongoDB): 2339612 ns
+Produto adicionado com sucesso!

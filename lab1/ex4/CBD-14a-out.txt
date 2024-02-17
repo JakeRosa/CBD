@@ -1,0 +1,17 @@
+Search for ('Enter' for quit): sus
+susan
+susana
+susanetta
+susann
+susanna
+susannah
+susanne
+susette
+susi
+susie
+susy
+Search for ('Enter' for quit): zora
+zora
+zorah
+zorana
+Search for ('Enter' for quit): 
